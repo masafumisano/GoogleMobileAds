@@ -1,0 +1,173 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXFileReference section */
+		210990CE21745DE400A90EE7 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleMobileAds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		210990D221745DE400A90EE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		210990C421745DE400A90EE7 = {
+			isa = PBXGroup;
+			children = (
+				210990D021745DE400A90EE7 /* GoogleMobileAds */,
+				210990CF21745DE400A90EE7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		210990CF21745DE400A90EE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				210990CE21745DE400A90EE7 /* GoogleMobileAds.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		210990D021745DE400A90EE7 /* GoogleMobileAds */ = {
+			isa = PBXGroup;
+			children = (
+				210990D221745DE400A90EE7 /* Info.plist */,
+			);
+			path = GoogleMobileAds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		210990CD21745DE400A90EE7 /* GoogleMobileAds */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 210990D621745DE400A90EE7 /* Build configuration list for PBXNativeTarget "GoogleMobileAds" */;
+			buildPhases = (
+				210990D921745F2900A90EE7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoogleMobileAds;
+			productName = GoogleMobileAds;
+			productReference = 210990CE21745DE400A90EE7 /* GoogleMobileAds.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		210990C521745DE400A90EE7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Yappli, Inc.";
+				TargetAttributes = {
+					210990CD21745DE400A90EE7 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 210990C821745DE400A90EE7 /* Build configuration list for PBXProject "GoogleMobileAds" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 210990C421745DE400A90EE7;
+			productRefGroup = 210990CF21745DE400A90EE7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				210990CD21745DE400A90EE7 /* GoogleMobileAds */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		210990D921745F2900A90EE7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "BASE_NAME=GoogleMobileAdsSdkiOS-${CURRENT_PROJECT_VERSION}\nMODULES_FOLDER_PATH=${EXECUTABLE_FOLDER_PATH}/Modules\ncurl -fsL http://dl.google.com/googleadmobadssdk/googlemobileadssdkios-${CURRENT_PROJECT_VERSION}.zip | tar -xf - -C ${PROJECT_TEMP_ROOT}\nmkdir -p ${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH} && cp ${PROJECT_TEMP_ROOT}/${BASE_NAME}/GoogleMobileAds.framework/Headers/*.h $_\nmkdir -p ${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/Mediation && cp ${PROJECT_TEMP_ROOT}/${BASE_NAME}/GoogleMobileAds.framework/Headers/Mediation/*.h $_\nmkdir -p ${TARGET_BUILD_DIR}/${MODULES_FOLDER_PATH} && cp ${PROJECT_TEMP_ROOT}/${BASE_NAME}/GoogleMobileAds.framework/Modules/module.modulemap $_\nlipo -extract $( echo ${ARCHS} | sed -e 's/ / -extract /g' ) ${PROJECT_TEMP_ROOT}/${BASE_NAME}/GoogleMobileAds.framework/GoogleMobileAds -o ${TARGET_BUILD_DIR}/${EXECUTABLE_FOLDER_PATH}/${TARGET_NAME}\nchmod 644 ${TARGET_BUILD_DIR}/${EXECUTABLE_FOLDER_PATH}/${TARGET_NAME}\nrm -rf ${PROJECT_TEMP_ROOT}/${BASE_NAME}\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		210990D421745DE400A90EE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CURRENT_PROJECT_VERSION = 7.32.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		210990D521745DE400A90EE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CURRENT_PROJECT_VERSION = 7.32.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		210990D721745DE400A90EE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GoogleMobileAds/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.GoogleMobileAds;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+			};
+			name = Debug;
+		};
+		210990D821745DE400A90EE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GoogleMobileAds/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.GoogleMobileAds;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		210990C821745DE400A90EE7 /* Build configuration list for PBXProject "GoogleMobileAds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				210990D421745DE400A90EE7 /* Debug */,
+				210990D521745DE400A90EE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		210990D621745DE400A90EE7 /* Build configuration list for PBXNativeTarget "GoogleMobileAds" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				210990D721745DE400A90EE7 /* Debug */,
+				210990D821745DE400A90EE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 210990C521745DE400A90EE7 /* Project object */;
+}
