@@ -101,7 +101,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "BASE_NAME=GoogleMobileAdsSdkiOS-${CURRENT_PROJECT_VERSION}\nMODULES_FOLDER_PATH=${EXECUTABLE_FOLDER_PATH}/Modules\ncurl -fsL http://dl.google.com/googleadmobadssdk/googlemobileadssdkios-${CURRENT_PROJECT_VERSION}.zip | tar -xf - -C ${PROJECT_TEMP_ROOT}\nmkdir -p ${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH} && cp ${PROJECT_TEMP_ROOT}/${BASE_NAME}/GoogleMobileAds.framework/Headers/*.h $_\nmkdir -p ${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/Mediation && cp ${PROJECT_TEMP_ROOT}/${BASE_NAME}/GoogleMobileAds.framework/Headers/Mediation/*.h $_\nmkdir -p ${TARGET_BUILD_DIR}/${MODULES_FOLDER_PATH} && cp ${PROJECT_TEMP_ROOT}/${BASE_NAME}/GoogleMobileAds.framework/Modules/module.modulemap $_\nlipo -extract $( echo ${ARCHS} | sed -e 's/ / -extract /g' ) ${PROJECT_TEMP_ROOT}/${BASE_NAME}/GoogleMobileAds.framework/GoogleMobileAds -o ${TARGET_BUILD_DIR}/${EXECUTABLE_FOLDER_PATH}/${TARGET_NAME}\nchmod 644 ${TARGET_BUILD_DIR}/${EXECUTABLE_FOLDER_PATH}/${TARGET_NAME}\nrm -rf ${PROJECT_TEMP_ROOT}/${BASE_NAME}\n";
+			shellScript = "BASE_NAME=GoogleMobileAdsSdkiOS-${CURRENT_PROJECT_VERSION}\nMODULES_FOLDER_PATH=${EXECUTABLE_FOLDER_PATH}/Modules\ncurl -fsL http://dl.google.com/googleadmobadssdk/googlemobileadssdkios-${CURRENT_PROJECT_VERSION}.zip | tar -xf - -C ${PROJECT_TEMP_ROOT}\nmkdir -p ${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH} && cp ${PROJECT_TEMP_ROOT}/${BASE_NAME}/GoogleMobileAds.framework/Headers/*.h $_\nmkdir -p ${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/Mediation && cp ${PROJECT_TEMP_ROOT}/${BASE_NAME}/GoogleMobileAds.framework/Headers/Mediation/*.h $_\nmkdir -p ${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/RTBMediation && cp ${PROJECT_TEMP_ROOT}/${BASE_NAME}/GoogleMobileAds.framework/Headers/RTBMediation/*.h $_\nmkdir -p ${TARGET_BUILD_DIR}/${MODULES_FOLDER_PATH} && cp ${PROJECT_TEMP_ROOT}/${BASE_NAME}/GoogleMobileAds.framework/Modules/module.modulemap $_\nlipo -extract $( echo ${ARCHS} | sed -e 's/ / -extract /g' ) ${PROJECT_TEMP_ROOT}/${BASE_NAME}/GoogleMobileAds.framework/GoogleMobileAds -o ${TARGET_BUILD_DIR}/${EXECUTABLE_FOLDER_PATH}/${TARGET_NAME}\nchmod 644 ${TARGET_BUILD_DIR}/${EXECUTABLE_FOLDER_PATH}/${TARGET_NAME}\nrm -rf ${PROJECT_TEMP_ROOT}/${BASE_NAME}\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -110,7 +110,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CURRENT_PROJECT_VERSION = 7.37.0;
+				CURRENT_PROJECT_VERSION = 7.42.0;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -121,7 +121,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CURRENT_PROJECT_VERSION = 7.37.0;
+				CURRENT_PROJECT_VERSION = 7.42.0;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
